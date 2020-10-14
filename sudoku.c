@@ -42,28 +42,64 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+/*int comp_linea_columna(int i,int j,Node* n){    
+  int k;
+  int f=0;
+  for(k=0;k<9;k++){
+    if(n[i][j]==n[k][j]){
+      f++;
+    }
+    if(n[i][j]==n[i][k]){
+      f++;
+    }
+  }
 
+  if(f<=2){
+    return 0;
+  }else{
     return 1;
+  }
+
+}*/
+
+int is_valid(Node* n){
+  /*int i;
+  int j;
+  int valido=0;
+    
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++){
+      valido=valido+comp_linea_columna(i,j,n);
+      valido=valido+comp_cuadrante(i,j,n);
+      if(valido>=1){
+        return 0;
+      }
+    }
+  }*/
+  return 1;
 }
 
 
 List* get_adj_nodes(Node* n){
-    List* lista=createList();
-    int i,j;
-    int num;
-    for(i=0;i<9;i++){
-      for(j=0;j<9;j++){
-        if(n->sudo[i][j]==0){
-          for(num=1; num <=9; num++){
-            Node* aux = (Node*) malloc (sizeof(Node));
-            aux -> sudo[i][j] = num;
+  List* lista=createList();
+  int i,j;
+  int num;
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++){
+      if(n->sudo[i][j]==0){
+        for(num=1; num <=9; num++){
+          n->sudo[i][j]=num;
+          if(is_valid(n)){
+            Node* aux = copy(n);
             pushBack(lista, aux);
           }
         }
+        n->sudo[i][j] = 0;
+        return lista;
       }
     }
-    return lista;
+  }
+  return lista;
 }
 
 
