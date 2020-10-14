@@ -1,0 +1,64 @@
+Wed Oct 14 19:48:06 UTC 2020: 
+ sudoku.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:25: error: assignment to expression with array type
+             aux -> sudo = n -> sudo;
+                         ^
+sudoku.c:62:13: error: implicit declaration of function ‘push_back’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+             push_back(lista, aux);
+             ^~~~~~~~~
+             pushBack
+sudoku.c:67:12: error: ‘list’ undeclared (first use in this function); did you mean ‘lista’?
+     return list;
+            ^~~~
+            lista
+sudoku.c:67:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:68:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 19:48:14 UTC 2020: 
+ sudoku.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:25: error: assignment to expression with array type
+             aux -> sudo = n -> sudo;
+                         ^
+sudoku.c:67:12: error: ‘list’ undeclared (first use in this function); did you mean ‘lista’?
+     return list;
+            ^~~~
+            lista
+sudoku.c:67:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:68:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+Wed Oct 14 19:48:20 UTC 2020: 
+ sudoku.c | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:25: error: assignment to expression with array type
+             aux -> sudo = n -> sudo;
+                         ^
+Compilation failed
+Wed Oct 14 19:49:34 UTC 2020: 
+ sudoku.c | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:25: error: assignment to expression with array type
+             aux -> sudo = n -> sudo;
+                         ^
+Compilation failed
+Wed Oct 14 19:57:13 UTC 2020: 
+ sudoku.c | 17 +++++++++++++++--
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+ tests:  0|5
+total_score: 0/70
+fd21b6b
