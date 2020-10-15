@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
-
+#include <stdbool.h>
+#include "list.h" 
 
 typedef struct{
    int sudo[9][9];
@@ -42,43 +42,45 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int comp_linea_columna(int i,int j,Node* n){
-  //Node* aux = copy(n);
+
+bool comp_linea_columna(int i,int j,Node*n){
+    
   int k;
   int f=0;
   for(k=0;k<9;k++){
+
     if(n->sudo[i][j]==n->sudo[k][j]){
       f++;
     }
+
     if(n->sudo[i][j]==n->sudo[i][k]){
       f++;
     }
   }
 
   if(f<=2){
-    return 0;
-  }else{
-    return 1;
+    return true;
   }
-
+  else{
+ 
+    return false;
+  }
 }
 
 int is_valid(Node* n){
   int i;
   int j;
-  int valido=0;
-  //Node* aux = copy(n);
-    
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
-      valido=valido+comp_linea_columna(i,j,n);
-      //valido=valido+comp_cuadrante(i,j,n);
-      if(valido>=1){
+
+      if(true == comp_linea_columna(i,j,n)){ /*&& true == comp_cuadrante(i,j,n)){*/
+        return 1;
+      }else{
         return 0;
       }
     }
   }
-  return 1;
+return 0;
 }
 
 
