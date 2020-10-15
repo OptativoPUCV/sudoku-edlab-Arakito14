@@ -42,14 +42,15 @@ void print_node(Node* n){
     printf("\n");
 }
 
-/*int comp_linea_columna(int i,int j,Node* n){    
+int comp_linea_columna(int i,int j,Node* n){
+  //Node* aux = copy(n);
   int k;
   int f=0;
   for(k=0;k<9;k++){
-    if(n[i][j]==n[k][j]){
+    if(n->sudo[i][j]==n->sudo[k][j]){
       f++;
     }
-    if(n[i][j]==n[i][k]){
+    if(n->sudo[i][j]==n->sudo[i][k]){
       f++;
     }
   }
@@ -60,22 +61,23 @@ void print_node(Node* n){
     return 1;
   }
 
-}*/
+}
 
 int is_valid(Node* n){
-  /*int i;
+  int i;
   int j;
   int valido=0;
+  //Node* aux = copy(n);
     
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
       valido=valido+comp_linea_columna(i,j,n);
-      valido=valido+comp_cuadrante(i,j,n);
+      //valido=valido+comp_cuadrante(i,j,n);
       if(valido>=1){
         return 0;
       }
     }
-  }*/
+  }
   return 1;
 }
 
