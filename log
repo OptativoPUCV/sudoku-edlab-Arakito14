@@ -599,3 +599,9 @@ Sun Oct 18 21:17:29 UTC 2020:
  tests:  0|0
 *** stack smashing detected ***: <unknown> terminated
 4f90a1d
+Sun Oct 18 21:23:28 UTC 2020: 
+ sudoku.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  1|4
+total_score: 10/70
+370591e
