@@ -50,10 +50,10 @@ bool comp_linea_columna(Node*n){
     for(j=0;j<9;j++){
       f=0;
       for(k=0;k<9;k++){
-        if(n->sudo[i][j]==n->sudo[k][j]){
+        if(n->sudo[i][j]==n->sudo[k][j]&&n->sudo!=0){
           f++;
         }
-        if(n->sudo[i][j]==n->sudo[i][k]){
+        if(n->sudo[i][j]==n->sudo[i][k]&&n->sudo!=0){
           f++;
         }
       }
