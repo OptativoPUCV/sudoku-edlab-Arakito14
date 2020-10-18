@@ -73,7 +73,7 @@ bool comp_linea_columna(Node* n){
         }
       }
       if(n->sudo[i][j]==0){
-        return true;
+        return false;
       }
       //printf("%d-",f);
       if(f>2){
