@@ -58,11 +58,9 @@ bool comp_linea_columna(int i,int j,Node*n){
     }
   }
 
-  if(f<=2){
+  if(f<3){
     return true;
-  }
-  else{
- 
+  }else{
     return false;
   }
 }
