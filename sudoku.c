@@ -43,26 +43,27 @@ void print_node(Node* n){
 }
 
 
-bool comp_linea_columna(int i,int j,Node*n){
-    
-  int k;
-  int f=0;
-  for(k=0;k<9;k++){
-
-    if(n->sudo[i][j]==n->sudo[k][j]){
-      f++;
-    }
-
-    if(n->sudo[i][j]==n->sudo[i][k]){
-      f++;
+bool comp_linea_columna(Node*n){
+  int i,j,k;
+  int f;
+  for(i=0;i<9;k++){
+    for(j=0;j<9;j++){
+      f=0;
+      for(k=0;k<9;k++){
+        if(n->sudo[i][j]==n->sudo[k][j]){
+          f++;
+        }
+        if(n->sudo[i][j]==n->sudo[i][k]){
+          f++;
+        }
+      }
+      if(f>2){
+        return false;
+      }
     }
   }
+  return true;
   //printf("%d  ",n->sudo[i][j]);
-  if(f<3){
-    return true;
-  }else{
-    return false;
-  }
 }
 
 bool  comp_cuadrante(int i,int j, Node* n){
@@ -90,26 +91,10 @@ bool  comp_cuadrante(int i,int j, Node* n){
 }
 
 int is_valid(Node* n){
-  int i;
-  int j;
-  int cont=0;
-  for(i=0;i<9;i++){
-    for(j=0;j<1;j++){
-      if(true == comp_linea_columna(i,j,n)){/*&& true == comp_cuadrante(i,j,n)){*/
-        cont++;
-      }else{
-        cont--;
-        break;
-      }
-    }
-  }
-  printf("%d hh ",cont);
-  if(cont==1){
+  if(true == comp_linea_columna(n)){
     return 1;
-  }else{
-    return 0;
-  }
-  return 0;
+  }else{return 0;}
+  /*&& true == comp_cuadrante(i,j,n)){*/
 }
 
 
