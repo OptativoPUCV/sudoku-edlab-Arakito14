@@ -50,7 +50,7 @@ int is_final(Node* n);
 List* get_adj_nodes(Node* n);
 Node* DFS(Node* initial, int* cont);
 
-void print_list(Node* n){
+void print_(Node* n){
   int i,j;
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
@@ -140,7 +140,6 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-        print_list(n);
         return lista;
       }
       //printf("%d ",n->sudo[i][j]);
@@ -163,25 +162,27 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  /*Stack* S = createStack();
+  Stack* S = createStack();
   push(S,initial);
 
   while(get_size(S)!=0){
-    Node* n = (S);
+    pop(S);
+    //push(S,n);
     
-    if(is_final(n)){
-      return n;
+    if(is_final(initial)){
+      return initial;
     }
     
-    List* adj = get_adj_nodes(n);
+    List* adj = get_adj_nodes(initial);
     Node* aux = first(adj);
     while(aux){
       push(S,aux);
       aux=next(adj);
     }
     
-    free(n);
-  }*/
+    cont++;
+    free(initial);
+  }
   
   return NULL;
 
