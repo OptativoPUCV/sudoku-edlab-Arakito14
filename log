@@ -591,3 +591,11 @@ Sun Oct 18 20:31:42 UTC 2020:
  tests:  1|4
 total_score: 10/70
 7ab67dc
+Sun Oct 18 21:17:29 UTC 2020: 
+ sudoku.c | 36 +++++++++++-------------------------
+ 1 file changed, 11 insertions(+), 25 deletions(-)
+*** stack smashing detected ***: <unknown> terminated
+*** stack smashing detected ***: <unknown> terminated
+ tests:  0|0
+*** stack smashing detected ***: <unknown> terminated
+4f90a1d
