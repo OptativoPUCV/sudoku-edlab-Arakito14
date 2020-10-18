@@ -59,14 +59,14 @@ bool comp_linea_columna(Node* n){
     }
     for(j=0;j<9;j++){
       for(num=1;num<10;num++){
-	      if(num == n->sudo[i][j] || num == n->sudo[j][i]){
+	      if(num == n->sudo[i][j]){ //|| num == n->sudo[j][i]){
           //("%d-",num);
 		      if(comp[num]==1){
-            //printf("fail %d -",num);
+            printf("fail %d -",num);
 			      return false;
           }
 		      else{
-            printf("suc %d -", num);
+            //printf("suc %d -", num);
 			      comp[num] = 1;
           }
         }
