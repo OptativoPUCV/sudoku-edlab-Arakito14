@@ -50,7 +50,7 @@ bool comp_linea_columna(Node*n){
     for(j=0;j<9;j++){
       f=0;
       if(n->sudo[i][j]==0){
-        return true;
+        f=0;
       }
       for(k=0;k<9;k++){
         if(n->sudo[i][j]==n->sudo[k][j]){
@@ -106,24 +106,22 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* lista=createList();
-  int k,l,cua,num,cont=0;
-  for(cua=0;cua<9;cua++){
-    for(k=3*(cua/3);k<3*(cua/3)+3;k++){
-      for(l=3*(cua%3);l<3*(cua%3)+3;l++){
-        if(n->sudo[k][l]==0){
-          for(num=1;num<10;num++){
-            n->sudo[k][l]=num;
-            if(is_valid(n)){
-              Node* aux = copy(n);
-              pushBack(lista, aux);
-              cont++;
-            }
-            if(cont>2){
-              break;
-            }
+  int i,j,num,cont=0;
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++){
+      if(n->sudo[i][j]==0){
+        for(num=1;num<10;num++){
+          n->sudo[i][j]=num;
+          if(is_valid(n)){
+            Node* aux = copy(n);
+            pushBack(lista, aux);
+            cont++;
           }
-        return lista;
+          if(cont>2){
+            break;
+          }
         }
+        return lista;
       }
     }
   }
