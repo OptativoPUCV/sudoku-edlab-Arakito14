@@ -60,7 +60,7 @@ bool comp_linea_columna(Node*n){
           f++;
         }
       }
-      printf("%d-",n->sudo[8][4]);
+      printf("%d-",f);
       if(f>2){
         return false;
       }
