@@ -116,6 +116,7 @@ List* get_adj_nodes(Node* n){
             Node* aux = copy(n);
             pushBack(lista, aux);
             cont++;
+            printf("%d",n->sudo[i][j]);
           }
           //if(cont>2){
             //break;
