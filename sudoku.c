@@ -94,7 +94,7 @@ int is_valid(Node* n){
   int j;
   int cont=0;
   for(i=0;i<9;i++){
-    for(j=0;j<9;j++){
+    for(j=0;j<1;j++){
       if(true == comp_linea_columna(i,j,n)){/*&& true == comp_cuadrante(i,j,n)){*/
         cont++;
       }else{
