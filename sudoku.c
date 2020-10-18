@@ -124,7 +124,7 @@ List* get_adj_nodes(Node* n){
         //return lista;
       }
       printf("%d ",n->sudo[i][j]);
-      if(i%3 == 2&&j%3==2) printf("\n");
+      if(i%9 == 2&&j%9==2) printf("\n");
       //if
     }
   }
