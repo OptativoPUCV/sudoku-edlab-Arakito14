@@ -96,13 +96,14 @@ int is_valid(Node* n){
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
       if(true == comp_linea_columna(i,j,n) && true == comp_cuadrante(i,j,n)){
-        cont = 1;
+        cont++;
       }else{
         cont = 0;
         break;
       }
     }
   }
+  printf("%d",cont);
   if(cont==1){
     return 1;
   }else{
