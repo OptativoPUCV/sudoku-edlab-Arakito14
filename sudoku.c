@@ -113,6 +113,7 @@ bool comp_linea_columna(Node* n){
 
 int is_valid(Node* n){
   if(true == comp_linea_columna(n)){
+    print_list(n);
     return 1;
   }else{
     return 0;
@@ -138,7 +139,7 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-        print_list(n);
+        //print_list(n);
         return lista;
       }
       //printf("%d ",n->sudo[i][j]);
