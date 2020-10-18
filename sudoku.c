@@ -42,8 +42,14 @@ void print_node(Node* n){
     printf("\n");
 }
 
+bool comp_linea_columna(Node* n);
+//bool  comp_cuadrante(Node* n);
+int is_valid(Node* n);
+int is_final(Node* n);
+List* get_adj_nodes(Node* n);
+Node* DFS(Node* initial, int* cont);
 
-bool comp_linea_columna(Node*n){
+bool comp_linea_columna(Node* n){
   int i,j,k;
   int f;
   for(i=0;i<9;k++){
@@ -70,7 +76,7 @@ bool comp_linea_columna(Node*n){
   //printf("%d  ",n->sudo[i][j]);
 }
 
-bool  comp_cuadrante(int i,int j, Node* n){
+/*bool  comp_cuadrante(Node* n){
   int k,l,cua,p,comp=0;
   for(cua=0;cua<9;cua++){
     for(p=0;p<9;p++){
@@ -92,7 +98,7 @@ bool  comp_cuadrante(int i,int j, Node* n){
     }
   }
   return true;
-}
+}*/
 
 int is_valid(Node* n){
   if(true == comp_linea_columna(n)){
