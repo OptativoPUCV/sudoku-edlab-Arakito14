@@ -60,7 +60,7 @@ bool comp_linea_columna(Node* n){
     for(j=0;j<9;j++){
       for(num=1;num<10;num++){
 	      if(num == n->sudo[i][j] || num == n->sudo[j][i]){
-          printf("%d-",num);
+          //("%d-",num);
 		      if(comp[num]==1)
 			      return false;
 		      else{
