@@ -57,7 +57,7 @@ bool comp_linea_columna(int i,int j,Node*n){
       f++;
     }
   }
-  printf("%d  ",f);
+  printf("%d  ",n->sudo[i][j]);
   if(f<3){
     return true;
   }else{
