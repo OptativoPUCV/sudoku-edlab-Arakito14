@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <string.h>
 #include "list.h" 
 
 typedef struct{
@@ -43,14 +42,15 @@ void print_node(Node* n){
     printf("\n");
 }
 
-bool comp_linea_columna(Node* n);
-//bool  comp_cuadrante(Node* n);
+/* StArT HeRe */
+
+bool compare(Node* n);
 int is_valid(Node* n);
 int is_final(Node* n);
 List* get_adj_nodes(Node* n);
 Node* DFS(Node* initial, int* cont);
 
-void print_(Node* n){
+/*void print_test(Node* n){
   int i,j;
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
@@ -59,67 +59,49 @@ void print_(Node* n){
     }
   }
   printf("\n");
-}
+}*/
 
-bool comp_linea_columna(Node* n){
+bool compare(Node* n){
   int i,j,num,k;//pos;
-  int comp[10];
+  int comp_linea[10];
+  int comp_columna[10];
+  //int comp_cuadrante[10];
   for(i=0;i<9;i++){
     for(k=0;k<10;k++){
-      comp[k]=0;
+      comp_linea[k]=0;
+      comp_columna[k]=0;
+      //comp_cuadrante[k]=0;
     }
     for(j=0;j<9;j++){
       for(num=1;num<10;num++){
-	      if(num == n->sudo[i][j]){ //|| num == n->sudo[j][i]){
-          //("%d-",num);
-		      if(comp[num]==1){
-            //printf("fail %d -",num);
+	      if(num == n->sudo[i][j]){
+		      if(comp_linea[num]==1){
 			      return false;
           }
 		      else{
-            //printf("suc %d -", num);
-			      comp[num] = 1;
+			      comp_linea[num] = 1;
+          }
+        }
+        if(num == n->sudo[j][i]){
+          if(comp_columna[num]==1){
+			      return false;
+          }
+		      else{
+			      comp_columna[num]=1;
           }
         }
       }
 		}
   }
-  //print_list(n);
   return true;
-  //printf("%d  ",n->sudo[i][j]);
 }
 
-/*bool  comp_cuadrante(Node* n){
-  int k,l,cua,p,comp=0;
-  for(cua=0;cua<9;cua++){
-    for(p=0;p<9;p++){
-      k=3*(cua/3) + (p/3) ;
-      l=3*(cua%3) + (p%3) ;
-      if(k==i && l==j){
-        break;
-      }
-    }
-  }
-
-  for(k=3*(cua/3);k<3*(cua/3)+3;k++){
-    for(l=3*(cua%3);l<3*(cua%3)+3;l++){
-      if(n->sudo[i][j]==n->sudo[k][l]){
-        comp++;
-      }if(comp>=2){
-        return false;
-      }
-    }
-  }
-  return true;
-}*/
-
 int is_valid(Node* n){
-  if(true == comp_linea_columna(n)){
+  if(true == compare(n)){
     return 1;
   }else{
     return 0;
   }
-  /*&& true == comp_cuadrante(i,j,n)){*/
 }
 
 
@@ -172,7 +154,7 @@ Node* DFS(Node* initial, int* cont){
     
     if(is_final(n)){
       print_node(n);
-      printf("fail"); 
+      //printf("fail");
       return n;
     }
     
