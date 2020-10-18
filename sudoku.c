@@ -72,9 +72,9 @@ bool comp_linea_columna(Node* n){
           f++;
         }
       }
-      //if(n->sudo[i][j]==0){
-        //return true;
-      //}
+      if(n->sudo[i][j]==0){
+        return true;
+      }
       //printf("%d-",f);
       if(f>2){
         return false;
