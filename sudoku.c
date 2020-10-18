@@ -128,6 +128,8 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
+        printf("%d ",n->sudo[i][j]);
+        if(j%9 == 8) printf("\n");
         return lista;
       }
       printf("%d ",n->sudo[i][j]);
