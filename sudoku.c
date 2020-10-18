@@ -121,8 +121,8 @@ List* get_adj_nodes(Node* n){
           Node* aux = copy(n);
           pushBack(lista, aux);
         }
-        return lista;
       }
+      return lista;
     }
   }
   return lista;
