@@ -120,8 +120,8 @@ List* get_adj_nodes(Node* n){
         if(is_valid(n)){
           Node* aux = copy(n);
           pushBack(lista, aux);
-          return lista;
         }
+        return lista;
       }
     }
   }
