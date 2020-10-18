@@ -49,8 +49,8 @@ bool comp_linea_columna(Node*n){
   for(i=0;i<9;k++){
     for(j=0;j<9;j++){
       f=0;
-      if(n->sudo[i][j] != 0){
-        continue;
+      if(n->sudo[i][j]==0){
+        return true;
       }
       for(k=0;k<9;k++){
         if(n->sudo[i][j]==n->sudo[k][j]){
@@ -60,7 +60,7 @@ bool comp_linea_columna(Node*n){
           f++;
         }
       }
-      printf("%d-",f);
+      //printf("%d-",f);
       if(f>2){
         return false;
       }
