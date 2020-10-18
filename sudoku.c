@@ -62,15 +62,17 @@ Node* DFS(Node* initial, int* cont);
 }*/
 
 bool compare(Node* n){
-  int i,j,num,k;//pos;
+  int i,j,num,k;
+
   int comp_linea[10];
   int comp_columna[10];
-  //int comp_cuadrante[10];
+  int comp_cuadrante[10];
+
   for(i=0;i<9;i++){
     for(k=0;k<10;k++){
       comp_linea[k]=0;
       comp_columna[k]=0;
-      //comp_cuadrante[k]=0;
+      comp_cuadrante[k]=0;
     }
     for(j=0;j<9;j++){
       for(num=1;num<10;num++){
@@ -82,12 +84,24 @@ bool compare(Node* n){
 			      comp_linea[num] = 1;
           }
         }
+
         if(num == n->sudo[j][i]){
           if(comp_columna[num]==1){
 			      return false;
           }
 		      else{
 			      comp_columna[num]=1;
+          }
+        }
+
+        int x = 3*(i/3) + (j/3);
+        int y = 3*(i%3) + (j%3);
+        if(num == n->sudo[x][y]){
+          if(comp_cuadrante[num]==1){
+            return false;
+            }
+		      else{
+			      comp_cuadrante[num] = 1;
           }
         }
       }
