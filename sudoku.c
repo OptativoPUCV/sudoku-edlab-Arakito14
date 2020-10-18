@@ -98,7 +98,7 @@ int is_valid(Node* n){
       if(true == comp_linea_columna(i,j,n) && true == comp_cuadrante(i,j,n)){
         cont++;
       }else{
-        cont = 0;
+        cont--;
         break;
       }
     }
