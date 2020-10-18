@@ -115,9 +115,9 @@ List* get_adj_nodes(Node* n){
     for(k=3*(cua/3);k<3*(cua/3)+3;k++){
       for(l=3*(cua%3);l<3*(cua%3)+3;l++){
         if(n->sudo[k][l]==0){
-          for(num=1;num<10;num++){
-            n->sudo[k][l]=num;
-            for(int cont=0;cont<3; cont++){
+          for(int cont=0;cont<3; cont++){
+            for(num=1;num<10;num++){
+              n->sudo[k][l]=num;
               if(is_valid(n)){
                 Node* aux = copy(n);
                 pushBack(lista, aux);
