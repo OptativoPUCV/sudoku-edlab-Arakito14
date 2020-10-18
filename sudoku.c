@@ -137,11 +137,10 @@ List* get_adj_nodes(Node* n){
             cont++;
           }
           if(cont>2){
-            print_list(n);
             break;
           }
         }
-        //print_list(n);
+        print_list(n);
         return lista;
       }
       //printf("%d ",n->sudo[i][j]);
