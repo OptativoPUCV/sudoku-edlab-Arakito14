@@ -50,6 +50,16 @@ int is_final(Node* n);
 List* get_adj_nodes(Node* n);
 Node* DFS(Node* initial, int* cont);
 
+void print_list(Node* n){
+  int i,j;
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++){
+      printf("%d ",n->sudo[i][j]);
+      if(j%9 == 8) printf("\n");
+    }
+  }
+}
+
 bool comp_linea_columna(Node* n){
   int i,j,num,k;//pos;
   int comp[10];
@@ -128,12 +138,11 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-        printf("%d ",n->sudo[i][j]);
-        if(j%9 == 8) printf("\n");
+        print_list(n);
         return lista;
       }
-      printf("%d ",n->sudo[i][j]);
-      if(j%9 == 8) printf("\n");
+      //printf("%d ",n->sudo[i][j]);
+      //if(j%9 == 8) printf("\n");
     }
   }
   return lista;
