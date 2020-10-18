@@ -93,7 +93,9 @@ bool  comp_cuadrante(int i,int j, Node* n){
 int is_valid(Node* n){
   if(true == comp_linea_columna(n)){
     return 1;
-  }else{return 0;}
+  }else{
+    return 1;
+  }
   /*&& true == comp_cuadrante(i,j,n)){*/
 }
 
