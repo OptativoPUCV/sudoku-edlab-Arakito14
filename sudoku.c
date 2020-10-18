@@ -167,7 +167,7 @@ Node* DFS(Node* initial, int* cont){
     //push(S,n);
     
     if(is_final(n)){
-      print_node(n);
+      //print_node(n);
       //printf("fail");
       return n;
     }
