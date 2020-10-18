@@ -50,10 +50,12 @@ List* get_adj_nodes(Node* n);
 Node* DFS(Node* initial, int* cont);
 
 bool comp_linea_columna(Node* n){
-  int i,j,num;//pos;
+  int i,j,num,k;//pos;
+  int comp[10];
   for(i=0;i<9;i++){
-    //pos = i;
-    int comp[10]= {0};
+    for(k=0;k<10;k++){
+      comp[k]=0;
+    }
     for(j=0;j<9;j++){
       for(num=1;num<10;num++){
 	      if(num == n->sudo[i][j] || num == n->sudo[j][i]){
