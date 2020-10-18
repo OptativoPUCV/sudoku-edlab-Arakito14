@@ -121,10 +121,10 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-        printf("%dxx",n->sudo[i][j]);
+        printf("%d ",n->sudo[i][j]);
         //return lista;
       }
-    }
+    }printf("\n");
   }
   return lista;
 }
