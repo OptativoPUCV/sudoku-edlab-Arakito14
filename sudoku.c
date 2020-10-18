@@ -121,7 +121,7 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-        return lista;
+        //return lista;
       }
     }
   }
@@ -141,31 +141,29 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
-  Stack* S = createStack();
+  /*Stack* S = createStack();
   push(S,initial);
 
   while(get_size(S)!=0){
-    pop(S);
-
-    if(is_final(initial)){
-      return initial;
+    Node* n = (S);
+    
+    if(is_final(n)){
+      return n;
     }
     
-    List* adj = get_adj_nodes(initial);
+    List* adj = get_adj_nodes(n);
     Node* aux = first(adj);
     while(aux){
       push(S,aux);
       aux=next(adj);
     }
     
-    free(initial);
-  }
+    free(n);
+  }*/
   
   return NULL;
 
 }
-
-
 
 /*
 int main( int argc, char *argv[] ){
