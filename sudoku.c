@@ -110,18 +110,18 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* lista=createList();
-  int p,num=1;
-  for(p=0;p<3;p++){
+  int p,num;
+  for(p=0;p<9;p++){
     //k=3*(cua/3)+(p/3);
     //l=3*(cua%3)+(p%3);
     if(n->sudo[0][p]==0){
-      //for(num=1;num<10;num++){
-        n->sudo[0][p]=num++;
+      for(num=1;num<10;num++){
+        n->sudo[0][p]=num;
         if(is_valid(n)){
           Node* aux = copy(n);
           pushBack(lista, aux);
         }
-      //}
+      }
       return lista;
     }
   }
