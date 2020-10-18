@@ -57,11 +57,10 @@ bool comp_linea_columna(int i,int j,Node*n){
       f++;
     }
   }
-
+  printf("%d  ",f);
   if(f<3){
     return true;
   }else{
-    printf("%d",f);
     return false;
   }
 }
