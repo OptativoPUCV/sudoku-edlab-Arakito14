@@ -57,7 +57,7 @@ bool comp_linea_columna(Node* n){
     for(k=0;k<10;k++){
       comp[k]=0;
     }
-    for(j=0;j<8;j++){
+    for(j=0;j<9;j++){
       for(num=1;num<10;num++){
 	      if(num == n->sudo[i][j]){ //|| num == n->sudo[j][i]){
           //("%d-",num);
@@ -128,7 +128,7 @@ List* get_adj_nodes(Node* n){
             break;
           }
         }
-        //return lista;
+        return lista;
       }
       //printf("%d ",n->sudo[i][j]);
       //if(j%9 == 8) printf("\n");
