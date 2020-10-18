@@ -110,7 +110,7 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* lista=createList();
-  int p,num=0;
+  int p,num=1;
   for(p=0;p<3;p++){
     //k=3*(cua/3)+(p/3);
     //l=3*(cua%3)+(p%3);
