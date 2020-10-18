@@ -58,6 +58,7 @@ void print_list(Node* n){
       if(j%9 == 8) printf("\n");
     }
   }
+  printf("\n");
 }
 
 bool comp_linea_columna(Node* n){
