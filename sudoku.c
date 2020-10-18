@@ -124,7 +124,7 @@ List* get_adj_nodes(Node* n){
             pushBack(lista, aux);
             cont++;
           }
-          if(cont>1){
+          if(cont>2){
             break;
           }
         }
