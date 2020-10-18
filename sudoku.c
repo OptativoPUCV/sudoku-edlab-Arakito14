@@ -62,10 +62,11 @@ bool comp_linea_columna(Node* n){
 	      if(num == n->sudo[i][j] || num == n->sudo[j][i]){
           //("%d-",num);
 		      if(comp[num]==1){
-            printf("fail");
+            //printf("fail %d -",num);
 			      return false;
           }
 		      else{
+            printf("suc %d -", num);
 			      comp[num] = 1;
           }
         }
