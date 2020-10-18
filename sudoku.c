@@ -103,7 +103,7 @@ int is_valid(Node* n){
       }
     }
   }
-  printf("%d",cont);
+  printf("%d hh ",cont);
   if(cont==1){
     return 1;
   }else{
