@@ -84,7 +84,7 @@ bool comp_linea_columna(Node* n){
       }
 		}
   }
-  print_list(n);
+  //print_list(n);
   return true;
   //printf("%d  ",n->sudo[i][j]);
 }
@@ -117,6 +117,7 @@ int is_valid(Node* n){
   if(true == comp_linea_columna(n)){
     return 1;
   }else{
+    print_list(n);
     return 0;
   }
   /*&& true == comp_cuadrante(i,j,n)){*/
