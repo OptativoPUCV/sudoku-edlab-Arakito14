@@ -62,7 +62,7 @@ bool comp_linea_columna(Node* n){
 	      if(num == n->sudo[i][j]){ //|| num == n->sudo[j][i]){
           //("%d-",num);
 		      if(comp[num]==1){
-            printf("fail %d -",num);
+            //printf("fail %d -",num);
 			      return false;
           }
 		      else{
@@ -130,8 +130,8 @@ List* get_adj_nodes(Node* n){
         }
         return lista;
       }
-      //printf("%d ",n->sudo[i][j]);
-      //if(j%9 == 8) printf("\n");
+      printf("%d ",n->sudo[i][j]);
+      if(j%9 == 8) printf("\n");
     }
   }
   return lista;
