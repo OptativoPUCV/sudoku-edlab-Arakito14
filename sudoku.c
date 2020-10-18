@@ -67,6 +67,30 @@ bool comp_linea_columna(int i,int j,Node*n){
   }
 }
 
+bool  comp_cuadrante(int i,int j, Node* n){
+  int k,l,cua,p,comp=0;
+  for(cua=0;cua<9;cua++){
+    for(p=0;p<9;p++){
+      k=3*(cua/3) + (p/3) ;
+      l=3*(cua%3) + (p%3) ;
+      if(k==i && l==j){
+        break;
+      }
+    }
+  }
+
+  for(k=3*(cua/3);k<3*(cua/3)+3;k++){
+    for(l=3*(cua%3);l<3*(cua%3)+3;l++){
+      if(n->sudo[i][j]==n->sudo[k][l]){
+        comp++;
+      }if(comp>=2){
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 int is_valid(Node* n){
   int i;
   int j;
