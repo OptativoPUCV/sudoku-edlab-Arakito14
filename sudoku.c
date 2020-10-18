@@ -61,6 +61,7 @@ bool comp_linea_columna(int i,int j,Node*n){
   if(f<3){
     return true;
   }else{
+    printf("%d",f);
     return false;
   }
 }
@@ -94,7 +95,6 @@ int is_valid(Node* n){
   int j;
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
-
       if(true == comp_linea_columna(i,j,n) && true == comp_cuadrante(i,j,n)){
         return 1;
       }else{
