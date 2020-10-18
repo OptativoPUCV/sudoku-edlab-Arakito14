@@ -92,14 +92,20 @@ bool  comp_cuadrante(int i,int j, Node* n){
 int is_valid(Node* n){
   int i;
   int j;
+  int cont=0;
   for(i=0;i<9;i++){
     for(j=0;j<9;j++){
       if(true == comp_linea_columna(i,j,n) && true == comp_cuadrante(i,j,n)){
-        return 1;
+        cont++;
       }else{
-        return 0;
+        cont--;
       }
     }
+  }
+  if(cont==81){
+    return 1;
+  }else{
+    return 0;
   }
   return 0;
 }
