@@ -61,8 +61,10 @@ bool comp_linea_columna(Node* n){
       for(num=1;num<10;num++){
 	      if(num == n->sudo[i][j] || num == n->sudo[j][i]){
           //("%d-",num);
-		      if(comp[num]==1)
+		      if(comp[num]==1){
+            printf("fail");
 			      return false;
+          }
 		      else{
 			      comp[num] = 1;
           }

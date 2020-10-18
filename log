@@ -629,3 +629,9 @@ Sun Oct 18 21:32:30 UTC 2020:
  tests:  1|4
 total_score: 10/70
 7cbe26e
+Sun Oct 18 21:33:34 UTC 2020: 
+ sudoku.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  1|4
+total_score: 10/70
+ccfa28d
