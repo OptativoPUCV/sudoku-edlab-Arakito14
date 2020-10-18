@@ -50,22 +50,28 @@ List* get_adj_nodes(Node* n);
 Node* DFS(Node* initial, int* cont);
 
 bool comp_linea_columna(Node* n){
+  List* adj = get_adj_nodes(n);
+  Node* aux = first(adj);
+  //while(aux){
+    //push(S,aux);
+    //aux=next(adj);
+  //}
   int i,j,k;
   int f;
   for(i=0;i<9;k++){
     for(j=0;j<9;j++){
       f=0;
       for(k=0;k<9;k++){
-        if(n->sudo[i][j]==n->sudo[k][j]){
+        if(aux->sudo[i][j]==aux->sudo[k][j]){
           f++;
         }
-        if(n->sudo[i][j]==n->sudo[i][k]){
+        if(aux->sudo[i][j]==aux->sudo[i][k]){
           f++;
         }
       }
-      if(n->sudo[i][j]==0){
-        return true;
-      }
+      //if(n->sudo[i][j]==0){
+        //return true;
+      //}
       //printf("%d-",f);
       if(f>2){
         return false;
